@@ -27,6 +27,6 @@ You can use `git fetch` to download the content (i.e., files, commits, and refs)
 git fetch <REMOTE_BRANCH> <ORIGIN>
 ```
 
-If so, it looks for changes in the remote branch, and pulls them into the tracking branch. It does not change your local branch. To do that, you'll need to do `git merge origin/master` (for the "master" branch) to merge those changes into your branch - probably also called "master".
+When you run `git fetch`, Git first checks whether your remote repository has the specified branch. If it does, Git downloads any changes from that branch to a separate local tracking branch. It does not change your local branch. To do that, you'll need to do `git merge origin/master` (for the "master" branch) to merge those changes into your branch - probably also called "master".
 
 `git pull` simply does a `git fetch` followed immediately by `git merge`. This is often what we desire to do, but some people prefer to use git fetch followed by git merge to make sure they understand the changes they are merging into their branch before the merge happens.
