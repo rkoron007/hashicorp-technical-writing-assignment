@@ -19,7 +19,7 @@ When you run `git push`, Git first checks whether the remote repository has an a
 - If there _is_ an associated remote branch, Git pushes changes from your local branch to that remote branch.
 - If there _is not_ an associated remote branch, Git pushes your local branch up to the remote repository, adding a new remote branch.
 
-The `git push` command can fail if your local and associated remote branches have diverged. This usually happens if your remote branch has commits that aren't on your local branch. When this happens, your local branch needs to be synchronized with the remote branch with git pull or git fetch and git merge.
+The `git push` command can fail if your local and associated remote branches have diverged. This usually happens if your remote branch has commits that aren't on your local branch. You can fix this by synchronizing your local branch with its associated remote branch using `git pull` or `git fetch` and `git merge`.
 
 `git fetch` again takes our current branch, and checks to see if there is a tracking branch. If so, it looks for changes in the remote branch, and pulls them into the tracking branch. It does not change your local branch. To do that, you'll need to do `git merge origin/master` (for the "master" branch) to merge those changes into your branch - probably also called "master".
 
