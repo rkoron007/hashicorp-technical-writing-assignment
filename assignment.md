@@ -14,7 +14,12 @@ git push <LOCAL_BRANCH> <ORIGIN>
 
 > In Git, "origin" is a shorthand name for your project's associated remote repository.
 
-If so, our changes are taken from our branch and pushed to the remote branch. This is how code is shared with a remote repository, you can think of it as "make the remote branch resemble my local branch". This will fail if the remote branch has diverged from your local branch: if not all the commits in the remote branch are in your local branch. When this happens, your local branch needs to be synchronized with the remote branch with git pull or git fetch and git merge.
+When you run `git push`, Git first checks whether the remote repository has an associated branch for the local branch you are attempting to push:
+
+- If there _is_ an associated remote branch, Git pushes changes from your local branch to that remote branch.
+- If there _is not_ an associated remote branch, Git pushes your local branch up to the remote repository, adding a new remote branch.
+
+This will fail if the remote branch has diverged from your local branch: if not all the commits in the remote branch are in your local branch. When this happens, your local branch needs to be synchronized with the remote branch with git pull or git fetch and git merge.
 
 `git fetch` again takes our current branch, and checks to see if there is a tracking branch. If so, it looks for changes in the remote branch, and pulls them into the tracking branch. It does not change your local branch. To do that, you'll need to do `git merge origin/master` (for the "master" branch) to merge those changes into your branch - probably also called "master".
 
