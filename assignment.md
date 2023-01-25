@@ -35,4 +35,4 @@ You can merge changes into your local branch using the `git merge` command. For 
 git merge origin/main
 ```
 
-`git pull` simply does a `git fetch` followed immediately by `git merge`. This is often what we desire to do, but some people prefer to use git fetch followed by git merge to make sure they understand the changes they are merging into their branch before the merge happens.
+Finally, `git pull` combines `git fetch` and `git merge` into a single command. This is often what we desire to do, but some people prefer to use git fetch followed by git merge to make sure they understand the changes they are merging into their branch before the merge happens.
