@@ -41,4 +41,4 @@ Finally, `git pull` combines `git fetch` and `git merge` into a single command. 
 git pull <REMOTE_BRANCH> <ORIGIN>
 ```
 
-This is often what we desire to do, but some people prefer to use git fetch followed by git merge to make sure they understand the changes they are merging into their branch before the merge happens.
+You can use either `git pull` or `git fetch` followed by `git merge` to accomplish the same goal. The advantage of using `git fetch` followed by `git merge` is that you can ensure you understand the incoming changes to your branch before a merge happens.
